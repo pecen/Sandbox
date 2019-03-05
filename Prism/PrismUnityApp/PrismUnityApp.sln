@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismUnityApp.UI.Shell", "PrismUnityApp.UI.Shell\PrismUnityApp.UI.Shell.csproj", "{99C9E82C-C594-446D-AA59-8FFBC43AD226}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismUnityApp.Module", "PrismUnityApp.Module\PrismUnityApp.Module.csproj", "{4A1CE84F-FA7A-485B-9014-AF1C70327BDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismUnityApp.Utilities", "PrismUnityApp.Utilities\PrismUnityApp.Utilities.csproj", "{4DD120F7-933F-4869-A2E2-77C3FE92DA31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismUnityApp.Library", "PrismUnityApp.Library\PrismUnityApp.Library.csproj", "{FF93E4BB-8914-44E6-A8D6-7D24A89E4842}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismUnityApp.Dal", "PrismUnityApp.Dal\PrismUnityApp.Dal.csproj", "{5F49421D-C682-48AD-9C49-EFA0EBD494F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismUnityApp.DalMock", "PrismUnityApp.DalMock\PrismUnityApp.DalMock.csproj", "{EA7F67A2-E0A0-41A8-9186-2B3E81904F1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismUnityApp.UI.Styles", "PrismUnityApp.UI.Styles\PrismUnityApp.UI.Styles.csproj", "{9D825C37-C6E8-467D-8557-DE249449A475}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99C9E82C-C594-446D-AA59-8FFBC43AD226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C9E82C-C594-446D-AA59-8FFBC43AD226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C9E82C-C594-446D-AA59-8FFBC43AD226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C9E82C-C594-446D-AA59-8FFBC43AD226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1CE84F-FA7A-485B-9014-AF1C70327BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1CE84F-FA7A-485B-9014-AF1C70327BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1CE84F-FA7A-485B-9014-AF1C70327BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1CE84F-FA7A-485B-9014-AF1C70327BDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD120F7-933F-4869-A2E2-77C3FE92DA31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD120F7-933F-4869-A2E2-77C3FE92DA31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD120F7-933F-4869-A2E2-77C3FE92DA31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD120F7-933F-4869-A2E2-77C3FE92DA31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF93E4BB-8914-44E6-A8D6-7D24A89E4842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF93E4BB-8914-44E6-A8D6-7D24A89E4842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF93E4BB-8914-44E6-A8D6-7D24A89E4842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF93E4BB-8914-44E6-A8D6-7D24A89E4842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F49421D-C682-48AD-9C49-EFA0EBD494F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F49421D-C682-48AD-9C49-EFA0EBD494F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F49421D-C682-48AD-9C49-EFA0EBD494F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F49421D-C682-48AD-9C49-EFA0EBD494F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7F67A2-E0A0-41A8-9186-2B3E81904F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7F67A2-E0A0-41A8-9186-2B3E81904F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7F67A2-E0A0-41A8-9186-2B3E81904F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7F67A2-E0A0-41A8-9186-2B3E81904F1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D825C37-C6E8-467D-8557-DE249449A475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D825C37-C6E8-467D-8557-DE249449A475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D825C37-C6E8-467D-8557-DE249449A475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D825C37-C6E8-467D-8557-DE249449A475}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9612DA7A-F896-41B7-9AD1-4960D49FEAAD}
+	EndGlobalSection
+EndGlobal
