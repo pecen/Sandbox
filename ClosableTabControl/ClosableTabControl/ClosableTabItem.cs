@@ -50,5 +50,23 @@ namespace ClosableTabControl {
 
     public static readonly RoutedEvent CloseTabEvent = 
       EventManager.RegisterRoutedEvent("CloseTab", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(ClosableTabItem));
+
+    public event RoutedEventHandler CloseTab {
+      add { AddHandler(CloseTabEvent, value); }
+      remove { RemoveHandler(CloseTabEvent, value); }
+    }
+
+    public override void OnApplyTemplate() {
+      base.OnApplyTemplate();
+
+
+      if (GetTemplateChild("PART_Close") is Button closeButton) {
+        closeButton.Click += new RoutedEventHandler(closeButton_Click);
+      }
+    }
+
+    private void closeButton_Click(object sender, RoutedEventArgs e) {
+      RaiseEvent(new RoutedEventArgs(CloseTabEvent, this));
+    }
   }
 }
