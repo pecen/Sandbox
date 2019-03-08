@@ -4,10 +4,10 @@
     xmlns:local="clr-namespace:ClosableTabControl">
 
 
-    <Style TargetType="{x:Type local:ClosableTabControl}">
+    <Style TargetType="{x:Type local:ClosableTabItem}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:ClosableTabControl}">
+                <ControlTemplate TargetType="{x:Type local:ClosableTabItem}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">

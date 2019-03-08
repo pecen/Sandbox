@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ClosableTabControl {
+namespace CloseableTabControl {
   /// <summary>
   /// Follow steps 1a or 1b and then 2 to use this custom control in a XAML file.
   ///
@@ -43,13 +43,13 @@ namespace ClosableTabControl {
   ///     <MyNamespace:ClosableTabItem/>
   ///
   /// </summary>
-  public class ClosableTabItem : TabItem {
-    static ClosableTabItem() {
-      DefaultStyleKeyProperty.OverrideMetadata(typeof(ClosableTabItem), new FrameworkPropertyMetadata(typeof(ClosableTabItem)));
+  public class CloseableTabItem : TabItem {
+    static CloseableTabItem() {
+      DefaultStyleKeyProperty.OverrideMetadata(typeof(CloseableTabItem), new FrameworkPropertyMetadata(typeof(CloseableTabItem)));
     }
 
     public static readonly RoutedEvent CloseTabEvent = 
-      EventManager.RegisterRoutedEvent("CloseTab", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(ClosableTabItem));
+      EventManager.RegisterRoutedEvent("CloseTab", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(CloseableTabItem));
 
     public event RoutedEventHandler CloseTab {
       add { AddHandler(CloseTabEvent, value); }
@@ -58,7 +58,6 @@ namespace ClosableTabControl {
 
     public override void OnApplyTemplate() {
       base.OnApplyTemplate();
-
 
       if (GetTemplateChild("PART_Close") is Button closeButton) {
         closeButton.Click += new RoutedEventHandler(closeButton_Click);

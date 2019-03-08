@@ -1,7 +1,7 @@
-﻿<Application x:Class="ClosableTabControl.App"
+﻿<Application x:Class="CloseableTabControl.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ClosableTabControl"
+             xmlns:local="clr-namespace:CloseableTabControl"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

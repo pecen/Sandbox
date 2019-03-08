@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClosableTabControl.Properties {
+namespace CloseableTabControl.Properties {
 
 
   [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
