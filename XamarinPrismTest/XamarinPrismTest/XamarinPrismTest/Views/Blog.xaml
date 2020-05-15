@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  x:Class="XamarinPrismTest.Views.Blog"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+  Title="{Binding Title}"
+  prism:ViewModelLocator.AutowireViewModel="True">
+
+  <Frame Margin="10" VerticalOptions="FillAndExpand">
+    <Frame.Content>
+      <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+          <Label HorizontalOptions="StartAndExpand" Text="{Binding BlogDetail.BlogTitle}" />
+          <Label HorizontalOptions="End" Text="{Binding BlogDetail.CreatedBy, StringFormat='Author: {0}'}" />
+        </StackLayout>
+        <BoxView
+          Margin="0,5,0,0"
+          HeightRequest="1"
+          HorizontalOptions="FillAndExpand"
+          Color="LightGray" />
+        <Label
+          LineBreakMode="WordWrap"
+          Text="{Binding BlogDetail.BlogDescription}"
+          VerticalOptions="FillAndExpand" />
+        <Label
+          HorizontalOptions="EndAndExpand"
+          Text="{Binding BlogDetail.CreatedDate, StringFormat='Date: {0: MM-dd-yyy}'}"
+          VerticalOptions="End" />
+      </StackLayout>
+    </Frame.Content>
+  </Frame>
+
+</ContentPage>

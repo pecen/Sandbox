@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  x:Class="XamarinPrismTest.Views.MainPage"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:local="clr-namespace:XamarinPrismTest.Behaviors"
+  Title="{Binding Title}">
+
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <ListView
+      local:ItemTappedAttached.Command="{Binding NavigateToBlogCommand}"
+      HasUnevenRows="True"
+      ItemsSource="{Binding Blogs, Mode=TwoWay}"
+      SelectedItem="{Binding SelectedBlog}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Frame Margin="10" VerticalOptions="FillAndExpand">
+              <Frame.Content>
+                <StackLayout>
+                  <Label Text="{Binding BlogTitle}" />
+                  <BoxView
+                    Margin="0,5,0,0"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Color="LightGray" />
+                  <Label
+                    HeightRequest="100"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding BlogDescription}" />
+                </StackLayout>
+              </Frame.Content>
+            </Frame>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+
+</ContentPage>

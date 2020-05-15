@@ -1,0 +1,22 @@
+﻿<Window
+    x:Class="CustomDependencyProperty.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CustomDependencyProperty"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="525"
+    Height="350"
+    mc:Ignorable="d">
+    <Grid>
+        <local:MyStackPanel x:Name="myStack" IsBrownBkgrd="true">
+            <CheckBox
+                x:Name="chkBkgColor"
+                Margin="77,117,0,0"
+                Click="bkgColor_Click"
+                Content="Brown Background"
+                IsChecked="True" />
+        </local:MyStackPanel>
+    </Grid>
+</Window>
