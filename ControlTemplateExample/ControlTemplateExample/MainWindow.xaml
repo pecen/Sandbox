@@ -1,0 +1,29 @@
+﻿<Window
+    x:Class="ControlTemplateExample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ControlTemplateExample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="525"
+    Height="350"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+            <Button
+                x:Name="btnOff"
+                Margin="0,20"
+                Click="btnOff_Click"
+                Content="Off"
+                Style="{StaticResource RoundRedButton}">
+                <Button.Effect>
+                    <DropShadowEffect
+                        BlurRadius="15"
+                        Direction="270"
+                        ShadowDepth="6" />
+                </Button.Effect>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

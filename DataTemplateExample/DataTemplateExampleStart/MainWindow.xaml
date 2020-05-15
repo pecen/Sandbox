@@ -1,0 +1,32 @@
+﻿<Window x:Class="DataTemplateExampleStart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+	<!--USE THIS WITH COMMENTED LISTBOX TO BIND DIRECTLY TO THE SOURCE OBJECT
+	<Window.Resources>
+		<CollectionViewSource x:Key="EmployeeData" Source="{Binding Employees}" />
+	</Window.Resources>-->
+
+	<Grid>
+		<!--<ListBox ItemsSource="{Binding Source={StaticResource EmployeeData}}"-->
+        <ListBox ItemsSource="{Binding Employees}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Height="35" Width="250" Grid.RowSpan="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Employee: " FontWeight="Bold" Height="Auto" />
+                            <TextBlock Text="{Binding EmployeeName}" Grid.Column="1" HorizontalAlignment="Left" />
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+	</Grid>
+</Window>
