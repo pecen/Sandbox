@@ -10,7 +10,7 @@ namespace DataTemplateExampleStart {
 
     public MainWindow() {
       InitializeComponent();
-      DataContext = this;
+      //DataContext = this;
       
       // Add this line to the Window element instead of this.DataContext here...
       // DataContext="{Binding RelativeSource={RelativeSource Self}}" 
