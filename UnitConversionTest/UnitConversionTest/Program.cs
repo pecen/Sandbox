@@ -17,6 +17,8 @@ namespace UnitConversionTest {
         else
           Console.WriteLine(unitConverter.Convert(s));
       } // foreach
+
+      Console.ReadKey();
     }
   }
 }
