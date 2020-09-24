@@ -93,7 +93,7 @@ namespace SimpleCommandDemoApp.ViewModels {
     }
 
     internal void Divide() {
-      Output = FirstValue / SecondValue;
+      Output = Math.Round(FirstValue / SecondValue, 4);
     }
   }
 }
