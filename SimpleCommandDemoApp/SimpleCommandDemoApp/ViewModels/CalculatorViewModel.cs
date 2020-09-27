@@ -64,16 +64,14 @@ namespace SimpleCommandDemoApp.ViewModels {
 
     }
 
-    public ICommand MultiplyCommand // Point 3
-    {
+    public ICommand MultiplyCommand {
       get {
         //return multiplicationCommand;
         return new RelayCommand(Multiply);
       }
     }
 
-    public ICommand DivideCommand // Point 3
-    {
+    public ICommand DivideCommand {
       get {
         //return divisionCommand;
         return new RelayCommand(Divide);
