@@ -58,8 +58,8 @@ namespace SimpleCommandDemoApp.ViewModels {
 
     public ICommand SubtractCommand {
       get {
-        return minusCommand;
-        // return new RelayCommand(Substract);
+        //return minusCommand;
+        return new RelayCommand(Substract);
       }
 
     }
@@ -67,16 +67,16 @@ namespace SimpleCommandDemoApp.ViewModels {
     public ICommand MultiplyCommand // Point 3
     {
       get {
-        return multiplicationCommand;
-        // return new RelayCommand(Multiply);
+        //return multiplicationCommand;
+        return new RelayCommand(Multiply);
       }
     }
 
     public ICommand DivideCommand // Point 3
     {
       get {
-        return divisionCommand;
-        // return new RelayCommand(Divide);
+        //return divisionCommand;
+        return new RelayCommand(Divide);
       }
     }
 
