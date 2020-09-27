@@ -9,16 +9,16 @@ using System.Windows.Input;
 
 namespace SimpleCommandDemoApp.ViewModels {
   public class CalculatorViewModel : ViewModelBase {
-    private readonly PlusCommand plusCommand;
-    private MinusCommand minusCommand;
-    private MultiplicationCommand multiplicationCommand;
-    private DivisionCommand divisionCommand;
+    //private readonly PlusCommand plusCommand;
+    //private MinusCommand minusCommand;
+    //private MultiplicationCommand multiplicationCommand;
+    //private DivisionCommand divisionCommand;
 
     public CalculatorViewModel() {
-      plusCommand = new PlusCommand(this);
-      minusCommand = new MinusCommand(this);
-      multiplicationCommand = new MultiplicationCommand(this);
-      divisionCommand = new DivisionCommand(this);
+      //plusCommand = new PlusCommand(this);
+      //minusCommand = new MinusCommand(this);
+      //multiplicationCommand = new MultiplicationCommand(this);
+      //divisionCommand = new DivisionCommand(this);
     }
 
     private double _firstValue;
