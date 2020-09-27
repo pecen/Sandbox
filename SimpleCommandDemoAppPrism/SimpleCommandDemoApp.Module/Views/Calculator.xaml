@@ -50,7 +50,7 @@
       Margin="10,0,0,0"
       HorizontalAlignment="Left"
       FontSize="20"
-      Text="{Binding FirstValue, Mode=TwoWay}"
+      Text="{Binding FirstValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
       TextAlignment="Center" />
     <TextBox
       Grid.Row="1"
@@ -61,7 +61,7 @@
       Margin="10,0,0,0"
       HorizontalAlignment="Left"
       FontSize="20"
-      Text="{Binding SecondValue, Mode=TwoWay}"
+      Text="{Binding SecondValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
       TextAlignment="Center" />
     <Rectangle
       Grid.Row="2"

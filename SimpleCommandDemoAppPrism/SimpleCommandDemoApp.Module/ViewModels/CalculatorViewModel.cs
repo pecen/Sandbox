@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using System;
+using Prism.Commands;
 using Prism.Events;
 using SimpleCommandDemoApp.Module.Commands;
 
@@ -35,9 +36,14 @@ namespace SimpleCommandDemoApp.Module.ViewModels {
       AddCommand = new DelegateCommand(Add);
       SubtractCommand = new DelegateCommand(Subtract);
       MultiplyCommand = new DelegateCommand(Multiply);
-      DivideCommand = new DelegateCommand(Divide);
+      DivideCommand = new DelegateCommand(Divide, CanExecuteDiv)
+        .ObservesProperty(() => SecondValue);
 
       _eventAggregator.GetEvent<CalculateCommand>().Subscribe(ValueReceived);
+    }
+
+    private bool CanExecuteDiv() {
+      return SecondValue != 0;
     }
 
     private void ValueReceived(double obj) => Output = obj;
