@@ -21,8 +21,13 @@ namespace SimpleCommandDemoApp.Module.ViewModels {
     private double _secondValue;
     public double SecondValue {
       get { return _secondValue; }
-      set { SetProperty(ref _secondValue, value); }
+      set {
+        SetProperty(ref _secondValue, value);
+        RaisePropertyChanged(nameof(IsNotZero));
+      }
     }
+
+    private bool IsNotZero => SecondValue != 0;
 
     private double _output;
     public double Output {
@@ -36,14 +41,10 @@ namespace SimpleCommandDemoApp.Module.ViewModels {
       AddCommand = new DelegateCommand(Add);
       SubtractCommand = new DelegateCommand(Subtract);
       MultiplyCommand = new DelegateCommand(Multiply);
-      DivideCommand = new DelegateCommand(Divide, CanExecuteDiv)
-        .ObservesProperty(() => SecondValue);
+      DivideCommand = new DelegateCommand(Divide)
+        .ObservesCanExecute(() => IsNotZero);
 
-      _eventAggregator.GetEvent<CalculateCommand>().Subscribe(ValueReceived);
-    }
-
-    private bool CanExecuteDiv() {
-      return SecondValue != 0;
+      eventAggregator.GetEvent<CalculateCommand>().Subscribe(ValueReceived);
     }
 
     private void ValueReceived(double obj) => Output = obj;
