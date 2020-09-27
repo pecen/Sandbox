@@ -61,7 +61,7 @@ namespace SimpleCommandDemoApp.Module.ViewModels {
     }
 
     private void Divide() {
-      _eventAggregator.GetEvent<CalculateCommand>().Publish(FirstValue / SecondValue);
+      _eventAggregator.GetEvent<CalculateCommand>().Publish(Math.Round(FirstValue / SecondValue, 4));
     }
   }
 }
