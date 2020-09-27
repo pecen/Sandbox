@@ -59,7 +59,7 @@ namespace SimpleCommandDemoApp.ViewModels {
     public ICommand SubtractCommand {
       get {
         //return minusCommand;
-        return new RelayCommand(Substract);
+        return new RelayCommand(Subtract);
       }
 
     }
