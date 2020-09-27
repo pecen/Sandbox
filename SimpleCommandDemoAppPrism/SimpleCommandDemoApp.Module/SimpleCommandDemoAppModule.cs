@@ -9,6 +9,7 @@ namespace SimpleCommandDemoApp.Module {
       var regionManager = containerProvider.Resolve<IRegionManager>();
 
       regionManager.RegisterViewWithRegion("ContentRegion", typeof(Calculator));
+      regionManager.RegisterViewWithRegion("ContentRegion", typeof(ViewA));
     }
 
     public void RegisterTypes(IContainerRegistry containerRegistry) {
