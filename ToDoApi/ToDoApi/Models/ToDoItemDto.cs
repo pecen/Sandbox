@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 
 namespace ToDoApi.Models
 {
-    public class ToDoItem
+    public class ToDoItemDto
     {
         public long Id { get; set; }
         public string Name { get; set; }
         public bool IsComplete { get; set; }
-        public string Secret { get; set; }
     }
 }

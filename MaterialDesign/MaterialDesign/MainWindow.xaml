@@ -30,8 +30,12 @@
       <md:Card Margin="16" Padding="32">
         <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">My First Material Design App</TextBlock>
       </md:Card>
-      <StackPanel Orientation="Horizontal">
-        <!--<md:Clock Margin="16" Padding="32" />-->
+            <md:Card Margin="16" Padding="32">
+                <md:Clock Margin="16" Padding="32"/>
+
+            </md:Card>
+      <!--<StackPanel Orientation="Horizontal">
+        --><!--<md:Clock Margin="16" Padding="32" />--><!--
         <md:DialogHost>
           <md:DialogHost.DialogContent>
             <StackPanel MinWidth="200" Margin="20">
@@ -59,7 +63,7 @@
             </StackPanel>
           </md:DialogHost.DialogContent>
         </md:DialogHost>
-      </StackPanel>
+      </StackPanel>-->
     </StackPanel>
   </Grid>
 </Window>

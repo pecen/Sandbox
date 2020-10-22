@@ -22,14 +22,16 @@ namespace ToDoApi.Controllers
 
         // GET: api/ToDoItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ToDoItem>>> GetToDoItems()
+        public async Task<ActionResult<IEnumerable<ToDoItemDto>>> GetToDoItems()
         {
-            return await _context.ToDoItems.ToListAsync();
+            return await _context.ToDoItems
+                .Select(x => ItemToDTO(x))
+                .ToListAsync();
         }
 
         // GET: api/ToDoItems/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ToDoItem>> GetToDoItem(long id)
+        public async Task<ActionResult<ToDoItemDto>> GetToDoItem(long id)
         {
             var toDoItem = await _context.ToDoItems.FindAsync(id);
 
@@ -38,21 +40,30 @@ namespace ToDoApi.Controllers
                 return NotFound();
             }
 
-            return toDoItem;
+            return ItemToDTO(toDoItem);
         }
 
         // PUT: api/ToDoItems/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutToDoItem(long id, ToDoItem toDoItem)
+        public async Task<IActionResult> UpdateToDoItem(long id, ToDoItemDto todoItemDto)
         {
-            if (id != toDoItem.Id)
+            if (id != todoItemDto.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(toDoItem).State = EntityState.Modified;
+            _context.Entry(todoItemDto).State = EntityState.Modified;
+
+            var todoItem = await _context.ToDoItems.FindAsync(id);
+            if (todoItem == null)
+            {
+                return NotFound();
+            }
+
+            todoItem.Name = todoItemDto.Name;
+            todoItem.IsComplete = todoItemDto.IsComplete;
 
             try
             {
@@ -77,12 +88,18 @@ namespace ToDoApi.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<ToDoItem>> PostToDoItem(ToDoItem toDoItem)
+        public async Task<ActionResult<ToDoItemDto>> CreateToDoItem(ToDoItemDto todoItemDto)
         {
-            _context.ToDoItems.Add(toDoItem);
+            var todoItem = new ToDoItem
+            {
+                IsComplete = todoItemDto.IsComplete,
+                Name = todoItemDto.Name
+            };
+
+            _context.ToDoItems.Add(todoItem);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetToDoItem), new { id = toDoItem.Id }, toDoItem);
+            return CreatedAtAction(nameof(GetToDoItem), new { id = todoItemDto.Id }, ItemToDTO(todoItem));
         }
 
         // DELETE: api/ToDoItems/5
@@ -98,12 +115,18 @@ namespace ToDoApi.Controllers
             _context.ToDoItems.Remove(toDoItem);
             await _context.SaveChangesAsync();
 
-            return toDoItem;
+            return NoContent();
         }
 
-        private bool ToDoItemExists(long id)
-        {
-            return _context.ToDoItems.Any(e => e.Id == id);
-        }
+        private bool ToDoItemExists(long id) =>
+            _context.ToDoItems.Any(e => e.Id == id);
+
+        private static ToDoItemDto ItemToDTO(ToDoItem todoItem) =>
+            new ToDoItemDto
+            {
+                Id = todoItem.Id,
+                Name = todoItem.Name,
+                IsComplete = todoItem.IsComplete
+            };
     }
 }
