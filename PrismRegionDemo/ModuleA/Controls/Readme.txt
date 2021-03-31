@@ -1,0 +1,2 @@
+﻿This folder is instead of the View folder, and holds views that starts with like "ControlA" instead of "ViewA", 
+and thus we have to change the naming convention in the Shell project's App.xaml.cs by overriding the ConfigureViewModelLocator()

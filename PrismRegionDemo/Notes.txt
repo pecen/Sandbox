@@ -1,0 +1,9 @@
+
+When registering a Module using a Directory, add the following row to Build Events -> Post-build event command line:
+
+xcopy "$(TargetDir)$(TargetName)*$(TargetExt)" "$(SolutionDir)$(SolutionName)\bin\Debug\netcoreapp3.1\Modules\" /Y /S
+
+
+When registering a Module using an App.config, add the following row to Build Events -> Post-build event command line:
+
+xcopy "$(TargetDir)*.*" "$(SolutionDir)\$(SolutionName)\bin\Debug\netcoreapp3.1" /Y
