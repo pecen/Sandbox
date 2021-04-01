@@ -3,6 +3,7 @@ using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Mvvm;
 using Prism.Regions;
+using PrismRegionDemo.Core.Commands;
 using PrismRegionDemo.Core.Regions;
 using PrismRegionDemo.Views;
 using System;
@@ -23,7 +24,7 @@ namespace PrismRegionDemo
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
         }
 
         protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)

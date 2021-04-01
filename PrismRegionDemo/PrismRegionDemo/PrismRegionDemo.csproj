@@ -106,6 +106,10 @@
       <Project>{4d661a11-7341-43a9-a3c5-1f9b7baaed95}</Project>
       <Name>ModuleA</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PrismRegionDemo.Core\PrismRegionDemo.Core.csproj">
+      <Project>{6B42673B-5CA1-4C3D-B7BC-B55AEBFDA772}</Project>
+      <Name>PrismRegionDemo.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
