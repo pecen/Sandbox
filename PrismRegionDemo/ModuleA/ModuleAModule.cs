@@ -21,8 +21,12 @@ namespace ModuleA
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
+            _regionManager.RegisterViewWithRegion("TabRegion", typeof(TabAView));
+            _regionManager.RegisterViewWithRegion("TabRegion", typeof(TabBView));
+            _regionManager.RegisterViewWithRegion("TabRegion", typeof(TabCView));
+
             // Displaying the View using View Discovery
-            _regionManager.RegisterViewWithRegion("ContentRegion", typeof(ViewA));
+            //_regionManager.RegisterViewWithRegion("ContentRegion", typeof(ViewA));
             //_regionManager.RegisterViewWithRegion("ContentRegion", typeof(ControlA));
 
             // Displaying the View using View Injection, which gives you more control

@@ -67,8 +67,21 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ViewModels\ControlAViewModel.cs" />
-    <Compile Include="ViewModels\TabViewViewModel.cs" />
+    <Compile Include="ViewModels\TabAViewModel.cs" />
+    <Compile Include="ViewModels\TabBViewModel.cs" />
+    <Compile Include="ViewModels\TabCViewModel.cs" />
+    <Compile Include="ViewModels\TabViewModel.cs" />
     <Compile Include="ViewModels\ViewAViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\TabAView.xaml.cs">
+      <DependentUpon>TabAView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabBView.xaml.cs">
+      <DependentUpon>TabBView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabCView.xaml.cs">
+      <DependentUpon>TabCView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TabView.xaml.cs">
       <DependentUpon>TabView.xaml</DependentUpon>
     </Compile>
@@ -92,6 +105,18 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\ControlA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TabAView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TabBView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TabCView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

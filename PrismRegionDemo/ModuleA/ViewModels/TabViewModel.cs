@@ -6,17 +6,16 @@ using System.Linq;
 
 namespace ModuleA.ViewModels
 {
-    public class TabViewViewModel : BindableBase
+    public class TabViewModel : ViewModelBase
     {
-        private string _title;
-
         public DelegateCommand UpdateCommand { get; private set; }
 
-        public string Title
-        {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
-        }
+        //private string _title;
+        //public string Title
+        //{
+        //    get { return _title; }
+        //    set { SetProperty(ref _title, value); }
+        //}
 
         private bool _canUpdate = false;
 
@@ -35,8 +34,10 @@ namespace ModuleA.ViewModels
         }
 
 
-        public TabViewViewModel()
+        public TabViewModel()
         {
+            Title = "View A";
+
             UpdateCommand = new DelegateCommand(Update)
                 .ObservesCanExecute(() => CanUpdate);
         }

@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace ModuleA.ViewModels
 {
-    public class ViewAViewModel : BindableBase
+    public class ViewAViewModel : ViewModelBase
     {
         public DelegateCommand ClickCommand { get; private set; }
 
-        private string _title;
+        //private string _title;
 
-        public string Title
-        {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
-        }
+        //public string Title
+        //{
+        //    get { return _title; }
+        //    set { SetProperty(ref _title, value); }
+        //}
 
         private string _message;
         public string Message
@@ -45,7 +45,7 @@ namespace ModuleA.ViewModels
         public ViewAViewModel()
         {
             Message = "View A from your Prism Module";
-            Title = "Hello from ViewAViewModel";
+            Title = "View A";
 
             // Automatically observes the specified property, in this case CanExecute,
             // and re-evaluates its binding
