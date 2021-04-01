@@ -21,9 +21,21 @@ namespace ModuleA
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            _regionManager.RegisterViewWithRegion("TabRegion", typeof(TabAView));
-            _regionManager.RegisterViewWithRegion("TabRegion", typeof(TabBView));
-            _regionManager.RegisterViewWithRegion("TabRegion", typeof(TabCView));
+            IRegion region = _regionManager.Regions["ContentRegion"];
+
+            var tabA = containerProvider.Resolve<TabView>();
+            SetTitle(tabA, "Tab A");
+            region.Add(tabA);
+
+            var tabB = containerProvider.Resolve<TabView>();
+            SetTitle(tabB, "Tab B");
+            region.Add(tabB);
+
+            var tabC = containerProvider.Resolve<TabView>();
+            SetTitle(tabC, "Tab C");
+            region.Add(tabC);
+
+            //_regionManager.RegisterViewWithRegion("TabRegion", typeof(TabView));
 
             // Displaying the View using View Discovery
             //_regionManager.RegisterViewWithRegion("ContentRegion", typeof(ViewA));
@@ -83,6 +95,11 @@ namespace ModuleA
             //{
             //    return new ControlAViewModel() { Text = "Hello from factory!" };
             //});
+        }
+
+        void SetTitle(TabView tab, string title)
+        {
+            (tab.DataContext as TabViewModel).Title = title;
         }
     }
 }

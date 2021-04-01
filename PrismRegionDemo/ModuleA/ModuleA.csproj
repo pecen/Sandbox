@@ -67,21 +67,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ViewModels\ControlAViewModel.cs" />
-    <Compile Include="ViewModels\TabAViewModel.cs" />
-    <Compile Include="ViewModels\TabBViewModel.cs" />
-    <Compile Include="ViewModels\TabCViewModel.cs" />
     <Compile Include="ViewModels\TabViewModel.cs" />
     <Compile Include="ViewModels\ViewAViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\TabAView.xaml.cs">
-      <DependentUpon>TabAView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TabBView.xaml.cs">
-      <DependentUpon>TabBView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TabCView.xaml.cs">
-      <DependentUpon>TabCView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\TabView.xaml.cs">
       <DependentUpon>TabView.xaml</DependentUpon>
     </Compile>
@@ -108,18 +96,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\TabAView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\TabBView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\TabCView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\TabView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -131,6 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Controls\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrismRegionDemo.Core\PrismRegionDemo.Core.csproj">
+      <Project>{6B42673B-5CA1-4C3D-B7BC-B55AEBFDA772}</Project>
+      <Name>PrismRegionDemo.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

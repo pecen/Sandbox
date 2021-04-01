@@ -19,12 +19,15 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Button Margin="10" Content="Save All" />
+        <Button
+            Margin="10"
+            Command="{Binding ApplicationCommands.SaveAllCommand}"
+            Content="Save All" />
 
         <TabControl
             Grid.Row="1"
             Margin="10"
-            prism:RegionManager.RegionName="{Binding TabRegion}" />
+            prism:RegionManager.RegionName="{Binding ContentRegion}" />
 
         <!--  This part is used with the DelegateCommand examples  -->
         <!--<ContentControl prism:RegionManager.RegionName="ContentRegion" />-->

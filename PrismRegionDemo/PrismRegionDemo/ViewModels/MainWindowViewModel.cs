@@ -1,21 +1,25 @@
 ﻿using ModuleA.ViewModels;
 using Prism.Mvvm;
+using PrismRegionDemo.Core.Commands;
 
 namespace PrismRegionDemo.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        public string TabRegion { get; } = "TabRegion";
+        public string ContentRegion { get; } = "ContentRegion";
 
-        //private string _title = "Prism Application";
-        //public string Title
-        //{
-        //    get { return _title; }
-        //    set { SetProperty(ref _title, value); }
-        //}
+        private IApplicationCommands _applicationCommands;
 
-        public MainWindowViewModel()
+        public IApplicationCommands ApplicationCommands
         {
+            get { return _applicationCommands; }
+            set { _applicationCommands = value; }
+        }
+
+        public MainWindowViewModel(IApplicationCommands applicationCommands)
+        {
+            ApplicationCommands = applicationCommands;
+
             Title = "Prism Application";
         }
     }
