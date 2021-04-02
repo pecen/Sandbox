@@ -22,7 +22,7 @@ namespace ModuleB.ViewModels
         public MessageListViewModel(IEventAggregator eventAggregator)
         {
             eventAggregator.GetEvent<MessageSentEvent>()
-                .Subscribe(OnMessageReceived);
+                .Subscribe(OnMessageReceived, ThreadOption.PublisherThread, false, message => message.Contains("Peter"));
         }
 
         private void OnMessageReceived(string message)
