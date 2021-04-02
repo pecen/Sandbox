@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismEventAggregatorDemo", "PrismEventAggregatorDemo\PrismEventAggregatorDemo.csproj", "{838FE348-2DCA-40EE-BE5E-0CA6BDF11632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleA", "ModuleA\ModuleA.csproj", "{0B86875C-64CD-4B3E-9BEE-A5B4010D3CCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleB", "ModuleB\ModuleB.csproj", "{0CADB6CD-E331-4F2A-B960-CE94DA7F5BE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismEventAggregatorDemo.Core", "PrismEventAggregatorDemo.Core\PrismEventAggregatorDemo.Core.csproj", "{9E4DE840-0C45-4C63-82A6-EC4EE96B4E02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{838FE348-2DCA-40EE-BE5E-0CA6BDF11632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838FE348-2DCA-40EE-BE5E-0CA6BDF11632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838FE348-2DCA-40EE-BE5E-0CA6BDF11632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838FE348-2DCA-40EE-BE5E-0CA6BDF11632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B86875C-64CD-4B3E-9BEE-A5B4010D3CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B86875C-64CD-4B3E-9BEE-A5B4010D3CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B86875C-64CD-4B3E-9BEE-A5B4010D3CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B86875C-64CD-4B3E-9BEE-A5B4010D3CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CADB6CD-E331-4F2A-B960-CE94DA7F5BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CADB6CD-E331-4F2A-B960-CE94DA7F5BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CADB6CD-E331-4F2A-B960-CE94DA7F5BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CADB6CD-E331-4F2A-B960-CE94DA7F5BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E4DE840-0C45-4C63-82A6-EC4EE96B4E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4DE840-0C45-4C63-82A6-EC4EE96B4E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4DE840-0C45-4C63-82A6-EC4EE96B4E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4DE840-0C45-4C63-82A6-EC4EE96B4E02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15D582CB-4050-4FB1-97AB-C9F4780A64D7}
+	EndGlobalSection
+EndGlobal
