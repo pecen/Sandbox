@@ -12,6 +12,7 @@ namespace ModuleB.ViewModels
     public class MessageListViewModel : BindableBase
     {
         private MessageSentEvent _event;
+        private SubscriptionToken _token;
 
         private ObservableCollection<string> _messages = new ObservableCollection<string>();
         public ObservableCollection<string> Messages
@@ -36,11 +37,12 @@ namespace ModuleB.ViewModels
         {
             if (isSubscribed)
             {
-                _event.Subscribe(OnMessageReceived);
+                _token = _event.Subscribe(OnMessageReceived);
             }
             else
             {
-                _event.Unsubscribe(OnMessageReceived);
+                //_event.Unsubscribe(OnMessageReceived);
+                _event.Unsubscribe(_token);
             }
         }
 
