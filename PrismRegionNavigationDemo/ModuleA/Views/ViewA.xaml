@@ -10,10 +10,16 @@
     d:DesignWidth="300"
     prism:ViewModelLocator.AutoWireViewModel="True"
     mc:Ignorable="d">
-    <Grid>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <TextBlock
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Text="{Binding Message}" />
-    </Grid>
+        <TextBlock
+            x:Name="_txtPageViews"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="24"
+            Text="0" />
+    </StackPanel>
 </UserControl>
