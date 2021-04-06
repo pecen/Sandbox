@@ -7,6 +7,11 @@ namespace ModuleA
 {
     public class ModuleAModule : IModule
     {
+        public ModuleAModule(RegionManager regionManager)
+        {
+            regionManager.RegisterViewWithRegion("ContentRegion", typeof(PersonList));
+        }
+
         public void OnInitialized(IContainerProvider containerProvider)
         {
  
@@ -14,8 +19,10 @@ namespace ModuleA
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<ViewA>();
-            containerRegistry.RegisterForNavigation<ViewB>();
+            //containerRegistry.RegisterForNavigation<ViewA>();
+            //containerRegistry.RegisterForNavigation<ViewB>();
+
+            containerRegistry.RegisterForNavigation<PersonDetail>();
         }
     }
 }
