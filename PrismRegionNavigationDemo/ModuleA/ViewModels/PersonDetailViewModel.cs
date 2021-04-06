@@ -25,7 +25,14 @@ namespace ModuleA.ViewModels
 
         public bool IsNavigationTarget(NavigationContext navigationContext)
         {
-            return true;
+            var person = navigationContext.Parameters.GetValue<Person>("person");
+
+            if(SelectedPerson.FirstName == person.FirstName && SelectedPerson.LastName == person.LastName)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public void OnNavigatedFrom(NavigationContext navigationContext)

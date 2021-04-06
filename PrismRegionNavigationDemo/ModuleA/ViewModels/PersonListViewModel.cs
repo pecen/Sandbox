@@ -48,11 +48,18 @@ namespace ModuleA.ViewModels
             {
                 people.Add(new Person()
                 {
-                    FirstName = String.Format("First {0}", i),
-                    LastName = String.Format("Last {0}", i),
+                    FirstName = $"First {i}",
+                    LastName = $"Last {i}",
                     Age = i
                 });
             }
+
+            people.Add(new Person()
+            {
+                FirstName = "First 10",
+                LastName = "Last 1",
+                Age = 33
+            });
 
             People = people;
         }
