@@ -24,27 +24,20 @@ namespace SimpleCommandDemoApp.ViewModels {
     private double _firstValue;
     public double FirstValue {
       get { return _firstValue; }
-      set {
-        _firstValue = value;
-      }
+      set { _firstValue = value; }
     }
 
     private double _secondValue;
     public double SecondValue {
       get { return _secondValue; }
-      set {
-        _secondValue = value;
-      }
+      set { _secondValue = value; }
     }
 
     private double _output;
 
     public double Output {
       get { return _output; }
-      set {
-        _output = value;
-        OnPropertyChanged(nameof(Output));
-      }
+      set { SetProperty(ref _output, value); }
     }
 
     public ICommand AddCommand {
