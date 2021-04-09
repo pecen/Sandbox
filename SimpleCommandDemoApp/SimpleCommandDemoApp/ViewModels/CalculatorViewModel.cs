@@ -26,7 +26,6 @@ namespace SimpleCommandDemoApp.ViewModels {
       get { return _firstValue; }
       set {
         _firstValue = value;
-        OnPropertyChanged(nameof(FirstValue));
       }
     }
 
@@ -35,7 +34,6 @@ namespace SimpleCommandDemoApp.ViewModels {
       get { return _secondValue; }
       set {
         _secondValue = value;
-        OnPropertyChanged(nameof(SecondValue));
       }
     }
 
