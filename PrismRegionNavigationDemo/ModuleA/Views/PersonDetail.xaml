@@ -13,6 +13,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <!--  First Name  -->
@@ -43,5 +44,7 @@
             Grid.Column="1"
             Margin="5"
             Text="{Binding SelectedPerson.Age}" />
+
+        <Button Command="{Binding GoBackCommand}" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" Width="75">Go Back</Button>
     </Grid>
 </UserControl>

@@ -9,11 +9,13 @@ using System.Linq;
 
 namespace ModuleA.ViewModels
 {
-    public class PersonListViewModel : BindableBase
+    public class PersonListViewModel : BindableBase, INavigationAware
     {
         private readonly IRegionManager _regionManager;
+        private IRegionNavigationJournal _journal;
 
         public DelegateCommand<Person> PersonSelectedCommand { get; private set; }
+        public DelegateCommand GoForwardCommand { get; set; }
 
         private ObservableCollection<Person> _people;
         public ObservableCollection<Person> People
@@ -27,7 +29,19 @@ namespace ModuleA.ViewModels
             _regionManager = regionManager;
 
             PersonSelectedCommand = new DelegateCommand<Person>(PersonSelected);
+            GoForwardCommand = new DelegateCommand(GoForward, CanGoForward);
+
             CreatePeople();
+        }
+
+        private bool CanGoForward()
+        {
+            return _journal != null && _journal.CanGoForward;
+        }
+
+        private void GoForward()
+        {
+            _journal.GoForward();
         }
 
         private void PersonSelected(Person person)
@@ -37,7 +51,8 @@ namespace ModuleA.ViewModels
             var p = new NavigationParameters();
             p.Add("person", person);
 
-            _regionManager.RequestNavigate("PersonDetailsRegion", "PersonDetail", p);
+            //_regionManager.RequestNavigate("PersonDetailsRegion", "PersonDetail", p);
+            _regionManager.RequestNavigate("ContentRegion", "PersonDetail", p);
         }
 
         //demo code only, use a service in production code
@@ -62,6 +77,21 @@ namespace ModuleA.ViewModels
             });
 
             People = people;
+        }
+
+        public void OnNavigatedTo(NavigationContext navigationContext)
+        {
+            _journal = navigationContext.NavigationService.Journal;
+            GoForwardCommand.RaiseCanExecuteChanged();
+        }
+
+        public bool IsNavigationTarget(NavigationContext navigationContext)
+        {
+            return true;
+        }
+
+        public void OnNavigatedFrom(NavigationContext navigationContext)
+        {
         }
     }
 }

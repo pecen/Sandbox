@@ -10,8 +10,11 @@ namespace ModuleA.ViewModels
 {
     public class PersonDetailViewModel : BindableBase, INavigationAware
     {
-        private Person _selectedPerson;
+        private IRegionNavigationJournal _journal;
 
+        public DelegateCommand GoBackCommand { get; set; }
+
+        private Person _selectedPerson;
         public Person SelectedPerson
         {
             get { return _selectedPerson; }
@@ -20,7 +23,12 @@ namespace ModuleA.ViewModels
 
         public PersonDetailViewModel()
         {
+            GoBackCommand = new DelegateCommand(GoBack);
+        }
 
+        private void GoBack()
+        {
+            _journal.GoBack();
         }
 
         public bool IsNavigationTarget(NavigationContext navigationContext)
@@ -42,6 +50,8 @@ namespace ModuleA.ViewModels
 
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
+            _journal = navigationContext.NavigationService.Journal;
+
             if (navigationContext.Parameters.ContainsKey("person"))
             {
                 SelectedPerson = navigationContext.Parameters.GetValue<Person>("person");
