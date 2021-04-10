@@ -3,7 +3,6 @@ using Prism.Ioc;
 using Prism.Modularity;
 using System.Windows;
 using ModuleA;
-using PrismDialogDemo.Dialogs;
 
 namespace PrismDialogDemo
 {
@@ -19,7 +18,7 @@ namespace PrismDialogDemo
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterDialog<MessageDialog, MessageDialogViewModel>();
+
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
