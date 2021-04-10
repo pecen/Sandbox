@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismDialogDemo", "PrismDia
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleA", "ModuleA\ModuleA.csproj", "{D4BE0CC2-89FE-4C4A-B5E7-7F50A9D68998}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismDialogDemo.Core", "PrismDialogDemo.Core\PrismDialogDemo.Core.csproj", "{B9CB41C4-B32C-4146-83C5-CFEFCE631240}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D4BE0CC2-89FE-4C4A-B5E7-7F50A9D68998}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4BE0CC2-89FE-4C4A-B5E7-7F50A9D68998}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4BE0CC2-89FE-4C4A-B5E7-7F50A9D68998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9CB41C4-B32C-4146-83C5-CFEFCE631240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9CB41C4-B32C-4146-83C5-CFEFCE631240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9CB41C4-B32C-4146-83C5-CFEFCE631240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9CB41C4-B32C-4146-83C5-CFEFCE631240}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

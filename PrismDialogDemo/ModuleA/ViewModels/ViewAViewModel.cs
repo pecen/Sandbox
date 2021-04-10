@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
+using PrismDialogDemo.Core.Extensions.Dialogs;
 
 namespace ModuleA.ViewModels
 {
@@ -26,13 +27,9 @@ namespace ModuleA.ViewModels
 
         private void ShowDialog()
         {
-            var p = new DialogParameters();
-
-            p.Add("message", "This is a test message."); 
-
-            _dialogService.ShowDialog("MessageDialog", p, result =>
+            _dialogService.ShowMessageDialog("Message we want to pass", result =>
             {
-                if(result.Result == ButtonResult.OK)
+                if (result.Result == ButtonResult.OK)
                 {
                     MessageReceived = result.Parameters.GetValue<string>("myParam");
                 }

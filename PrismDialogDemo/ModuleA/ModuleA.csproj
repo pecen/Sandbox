@@ -81,7 +81,12 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\PrismDialogDemo.Core\PrismDialogDemo.Core.csproj">
+      <Project>{b9cb41c4-b32c-4146-83c5-cfefce631240}</Project>
+      <Name>PrismDialogDemo.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Views\Dialogs\MessageDialog.xaml">
       <SubType>Designer</SubType>
