@@ -18,7 +18,7 @@
             Content="Show Dialog" />
         <TextBlock
             Margin="10"
-            FontSize="36"
+            FontSize="24"
             Text="{Binding MessageReceived}" />
     </StackPanel>
 </UserControl>
