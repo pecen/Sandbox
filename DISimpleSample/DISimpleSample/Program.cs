@@ -54,13 +54,13 @@ namespace DISimpleSample
 
         private static void InitializeRepo()
         {
-            SimpleIOC ioc = new SimpleIoC();
-            ioc.Register<MainViewModel, MainViewModel>();
-            ioc.Register<ICustomer, Customer>();
-            ioc.Register<ICustomerRepository, CustomerRepository>();
-            ioc.Register<IDbGateway, DbGateway>();
+            SimpleIOC ioc = new SimpleIOC();
+            //ioc.Register<MainView, MainViewModel>();
+            //ioc.Register<ICustomer, Customer>();
+            //ioc.Register<ICustomerRepository, CustomerRepository>();
+            //ioc.Register<IDbGateway, DbGateway>();
 
-            var mainViewModel = ioc.Resolve<MainViewModel>();
+            //var mainViewModel = ioc.Resolve<MainViewModel>();
         }
 
         private static void Charge()
@@ -87,7 +87,7 @@ namespace DISimpleSample
                 FixedDocumentSequence fixedDocSeq = xpsDocument.GetFixedDocumentSequence();
                 p.PrintDocument(fixedDocSeq.DocumentPaginator, "Test print job");
 
-                MessageBox("The report was printed");
+                MessageBox.Show("The report was printed");
             }
             else
             {
