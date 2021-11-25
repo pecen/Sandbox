@@ -43,7 +43,7 @@ namespace WpfLayeredDrawing
             //    .OrderBy(o => o.Priority)
             //    .Select(t => t);
 
-            foreach (WpfLayerInfo layer in a)
+            foreach (WpfLayerInfo layer in affected)
             {
                 DrawingContext ctx = layer.Visual.RenderOpen();
                 layer.Draw(ctx);
