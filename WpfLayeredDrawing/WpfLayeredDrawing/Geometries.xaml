@@ -1,0 +1,8 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:presentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+    <Geometry x:Key="RightArrowGeometry" presentationOptions:Freeze="True">M 0 0 4 4 0 8</Geometry>
+    <Geometry x:Key="LeftArrowGeometry" presentationOptions:Freeze="True">M 4 0 0 4 4 8</Geometry>
+</ResourceDictionary>

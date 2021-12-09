@@ -17,10 +17,21 @@ namespace WpfLayeredDrawing
             Draw = draw;
         }
 
+        public WpfLayerInfo(int priority, Action<DrawingContext, Fonts> drawText, DrawingVisual visual, ChangeType notifyOnChange, Fonts font)
+        {
+            NotifyOnChange = notifyOnChange;
+            Priority = priority;
+            Visual = visual;
+            DrawText = drawText;
+            Font = font;
+        }
+
         public ChangeType NotifyOnChange { get; private set; }
         public int Priority { get; private set; }
         public DrawingVisual Visual { get; private set; }
         public Action<DrawingContext> Draw { get; private set; }
+        public Action<DrawingContext, Fonts> DrawText { get; private set; }
+        public Fonts Font { get; private set; }
     }
 }
 

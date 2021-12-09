@@ -32,6 +32,18 @@ namespace WpfLayeredDrawing
             _layers.ForEach(l => _children.Add(l.Visual));
         }
 
+        public void AddTextLayer(int priority, Action<DrawingContext, Fonts> draw, ChangeType notifyOnChange = ChangeType.Redraw)
+        {
+            var drawingVisual = new DrawingVisual();
+            var layerInfo = new WpfLayerInfo(priority, draw, drawingVisual, notifyOnChange, Fonts.DefaultFontBoldItalic);
+
+            _layers.Add(layerInfo);
+            _layers.Sort((x, y) => x.Priority.CompareTo(y.Priority));
+
+            _children.Clear();
+            _layers.ForEach(l => _children.Add(l.Visual));
+        }
+
         public void Draw(ChangeType changeType)
         {
             var affected = from l in _layers
@@ -46,7 +58,16 @@ namespace WpfLayeredDrawing
             foreach (WpfLayerInfo layer in affected)
             {
                 DrawingContext ctx = layer.Visual.RenderOpen();
-                layer.Draw(ctx);
+
+                if (layer.Draw == null)
+                {
+                    layer.DrawText(ctx, layer.Font);
+                }
+                else
+                {
+                    layer.Draw(ctx);
+                }
+
                 ctx.Close();
             }
         }
@@ -55,7 +76,7 @@ namespace WpfLayeredDrawing
 
         protected override Visual GetVisualChild(int index)
         {
-            if(index < 0 || index >= _children.Count)
+            if (index < 0 || index >= _children.Count)
             {
                 throw new ArgumentOutOfRangeException("index");
             }
