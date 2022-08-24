@@ -15,10 +15,14 @@ namespace CastTest
             Func<int> myFunc = () => 10;
             Expression<Func<int>> myExpr = () => 10;
 
-            object[] doubles = { 1.0, 2.0, 3.0 };
+            object[] doubles = { 1.0, 2.0, 3.0, 4.0, 3.0 };
             IEnumerable<double> d = doubles.Cast<double>();
             var e = d.Where(c => c == 3);
-            WriteLine(e);
+            foreach (var item in e)
+            {
+                WriteLine(item);
+            }
+            //WriteLine(e);
             ReadKey();
         }
     }
