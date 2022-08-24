@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPatternExample.UI.Console", "ObserverPatternExample.UI.Console\ObserverPatternExample.UI.Console.csproj", "{32E5DF8B-521E-406A-A5FF-29E8742EDF0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPatternExample.Library", "ObserverPatternExample.Library\ObserverPatternExample.Library.csproj", "{3746C2DD-9A7B-450B-B7AD-F259EF630EA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32E5DF8B-521E-406A-A5FF-29E8742EDF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E5DF8B-521E-406A-A5FF-29E8742EDF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E5DF8B-521E-406A-A5FF-29E8742EDF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E5DF8B-521E-406A-A5FF-29E8742EDF0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3746C2DD-9A7B-450B-B7AD-F259EF630EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3746C2DD-9A7B-450B-B7AD-F259EF630EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3746C2DD-9A7B-450B-B7AD-F259EF630EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3746C2DD-9A7B-450B-B7AD-F259EF630EA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF4C9BC9-EE29-4872-BD08-A0A312791438}
+	EndGlobalSection
+EndGlobal
