@@ -11,7 +11,7 @@ namespace CloseWindowMVVM2
     public interface ICloseWindow
     {
         Action Close { get; set; }
-        bool CanClose();
+        bool CanClose { get; }
     }
 
     public class MainWindowViewModel : ICloseWindow
@@ -22,9 +22,9 @@ namespace CloseWindowMVVM2
 
         public Action Close { get; set; }
 
-        public bool CanClose()
+        public bool CanClose
         {
-            return true;
+            get { return false; }
         }
 
         private void CloseWindow()
@@ -66,7 +66,7 @@ namespace CloseWindowMVVM2
 
                         window.Closing += (t, u) =>
                         {
-                            u.Cancel = !vm.CanClose();
+                            u.Cancel = !vm.CanClose;
                         };
                     }
                 };
