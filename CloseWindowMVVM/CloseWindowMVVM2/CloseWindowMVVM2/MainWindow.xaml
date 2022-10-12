@@ -1,4 +1,7 @@
-﻿<Window
+﻿<!--  The line local:WindowCloser.EnableWindowClosing enables the AttachedProperty WindowCloser. By doing  -->
+<!--  that you are able to control the whole closing process, no matter if you try to close from a button  -->
+<!--  or if you try to close via the upper right X-button in the title bar of the window. -->
+<Window
   x:Class="CloseWindowMVVM2.MainWindow"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
