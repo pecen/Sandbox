@@ -82,7 +82,7 @@
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <TextBlock Text="Some text" />
+                    <TextBlock Text="Some additional text" />
                     <ListBox Height="200" />
                 </StackPanel>
             </ScrollViewer>
