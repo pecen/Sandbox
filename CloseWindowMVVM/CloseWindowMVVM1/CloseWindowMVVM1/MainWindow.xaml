@@ -9,6 +9,10 @@
   Width="800"
   Height="450"
   mc:Ignorable="d">
+  <Window.DataContext>
+    <local:MainWindowViewModel />
+  </Window.DataContext>
+  
   <Grid>
     <Button
       Width="125"
