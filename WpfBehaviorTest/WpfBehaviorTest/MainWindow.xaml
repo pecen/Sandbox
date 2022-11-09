@@ -6,6 +6,7 @@
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:local="clr-namespace:WpfBehaviorTest"
   xmlns:localBehaviors="clr-namespace:WpfBehaviorTest.Behaviors"
+  xmlns:smoothScrollViewer="clr-namespace:SmoothScrollViewer;assembly=SmoothScrollViewer"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   Title="MainWindow"
   Width="525"
@@ -19,6 +20,17 @@
       Hint: the animated scrolling is only working when scrolling is performed by physical
       units, i.e. CanContentScroll is set to false. When CanContentScroll = true the animation
       is automatically switched off!
+    
+      You either use the control directly like:
+    
+      <smoothScrollViewer:SmoothScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+    
+      or you use it as a behavior on a normal ScrollViewer like:
+      
+      <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Behaviors:Interaction.Behaviors>
+          <localBehaviors:SmoothScrollViewerBehavior />
+        </Behaviors:Interaction.Behaviors>
     -->
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
       <Behaviors:Interaction.Behaviors>
