@@ -10,7 +10,7 @@ namespace congestion.calculator
     {
         public string GetVehicleType()
         {
-            return "Motorbike";
+            return CongestionTaxCalculator.TollFreeVehicles.Motorcycle.ToString(); //"Motorbike";
         }
     }
 }
