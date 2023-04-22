@@ -8,6 +8,6 @@ namespace congestion.calculator
 {
     public interface Vehicle
     {
-        String GetVehicleType();
+        string GetVehicleType();
     }
 }
