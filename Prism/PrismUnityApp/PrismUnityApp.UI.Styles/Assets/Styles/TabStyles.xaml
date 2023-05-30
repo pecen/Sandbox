@@ -31,7 +31,7 @@
   <SolidColorBrush x:Key="TabItemDisabledBackground" Color="#F4F4F4" />
   <SolidColorBrush x:Key="TabItemDisabledBorderBrush" Color="#FFC9C7BA" />
 
-  <Style TargetType="{x:Type local:CloseableTabItem}">
+  <!--<Style TargetType="{x:Type local:CloseableTabItem}">
     <Style.Resources>
       <LinearGradientBrush x:Key="ButtonNormalBackground" StartPoint="0,0" EndPoint="0,1">
         <GradientStop Offset="0" Color="#F3F3F3" />
@@ -213,6 +213,6 @@
         </ControlTemplate>
       </Setter.Value>
     </Setter>
-  </Style>
+  </Style>-->
 
 </ResourceDictionary>
