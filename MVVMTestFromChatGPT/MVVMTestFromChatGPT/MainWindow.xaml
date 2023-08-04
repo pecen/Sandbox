@@ -1,0 +1,17 @@
+﻿<Window x:Class="MVVMTestFromChatGPT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MVVMTestFromChatGPT"
+        Title="MVVM Exammple from ChatGPT" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Name:" />
+            <TextBox Text="{Binding Person.Name, Mode=TwoWay}" />
+
+            <TextBlock Text="Age:" />
+            <TextBox Text="{Binding Person.Age, Mode=TwoWay}" />
+
+            <Button Content="Save" Command="{Binding SaveCommand}" />
+        </StackPanel>
+    </Grid>
+</Window>
