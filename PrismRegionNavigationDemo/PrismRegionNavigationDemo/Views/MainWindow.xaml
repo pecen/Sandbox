@@ -16,8 +16,8 @@
             Margin="5"
             HorizontalAlignment="Center"
             Orientation="Horizontal">
-            <!--<Button Margin="5" Command="{Binding NavigateCommand}" CommandParameter="ViewA">Navigate to View A</Button>
-            <Button Margin="5" Command="{Binding NavigateCommand}" CommandParameter="ViewB">Navigate to View B</Button>-->
+            <Button Margin="5" Command="{Binding NavigateCommand}" CommandParameter="ViewA">Navigate to View A</Button>
+            <Button Margin="5" Command="{Binding NavigateCommand}" CommandParameter="ViewB">Navigate to View B</Button>
         </StackPanel>
         <ContentControl Grid.Row="1" prism:RegionManager.RegionName="ContentRegion" />
     </Grid>
