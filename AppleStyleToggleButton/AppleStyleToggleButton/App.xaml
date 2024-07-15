@@ -6,7 +6,7 @@
     StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <Style TargetType="{x:Type ToggleButton}">
+            <Style x:Key="appleStyleToggle" TargetType="{x:Type ToggleButton}">
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type ToggleButton}">
@@ -45,10 +45,11 @@
                                 <EventTrigger RoutedEvent="Checked">
                                     <BeginStoryboard>
                                         <Storyboard>
+                                            <!--  The color animation attribute "To" was originally set to the Apple green color #FF4CD661  -->
                                             <ColorAnimation
                                                 Storyboard.TargetName="Border"
                                                 Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                To="#FF4CD661"
+                                                To="#FF164863"
                                                 Duration="0:0:0.1" />
                                             <ThicknessAnimation
                                                 Storyboard.TargetName="Ellipse"

@@ -9,6 +9,6 @@
     d:DesignWidth="100"
     mc:Ignorable="d">
     <Grid>
-        <ToggleButton Width="100" Height="40" />
+        <ToggleButton Style="{StaticResource appleStyleToggle}" Width="100" Height="40" />
     </Grid>
 </UserControl>
