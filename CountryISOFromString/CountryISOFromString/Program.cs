@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using static System.Console;
 
 namespace CountryISOFromString
 {
@@ -6,10 +7,18 @@ namespace CountryISOFromString
     {
         static void Main(string[] args)
         {
-            var country = Country.FromString("Tampere, Pirkanmaa, Finland");
-            var country2 = Country.FromString("Stockholm, Stockholm, Sweden"); 
-            Console.WriteLine(country.code);
-            Console.WriteLine(country2.code);
+            WriteLine("Type a country name: ");
+            var response = ReadLine();
+
+            //var country = Country.FromString("Tampere, Pirkanmaa, Finland");
+            //var country2 = Country.FromString("Stockholm, Stockholm, Sweden"); 
+
+            var country = Country.FromString(response);
+
+            WriteLine($"The country code for {response} is {country.code}");
+            //WriteLine(country2.code);
+
+            ReadKey();
         }
 
 
