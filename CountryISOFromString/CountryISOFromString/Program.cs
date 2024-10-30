@@ -13,9 +13,9 @@ namespace CountryISOFromString
             //var country = Country.FromString("Tampere, Pirkanmaa, Finland");
             //var country2 = Country.FromString("Stockholm, Stockholm, Sweden"); 
 
-            var country = Country.FromString(response);
+            var country = Country.FromString(response) ?? new Country();
 
-            WriteLine($"The country code for {response} is {country.code}");
+            WriteLine($"The country code for {response} is {country?.code}");
             //WriteLine(country2.code);
 
             ReadKey();
@@ -46,9 +46,9 @@ namespace CountryISOFromString
                 return Countries.FirstOrDefault(country => address.ToLower().Contains(country.name.ToLower()));
             }
 
-            public string name { get; set; }
-            public string code { get; set; }
-            public int numericCode { get; set; }
+            public string name { get; set; } = "<No Matching Country>";
+            public string code { get; set; } = "<No Matching Country>";
+            public int numericCode { get; set; } = 0;
         }
 
     }
